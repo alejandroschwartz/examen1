@@ -1,0 +1,5 @@
+{
+    "appService.preDeployTask": "publish-release",
+    "appService.deploySubpath": "bin\\Release\\net5.0\\publish",
+    "appService.defaultWebAppToDeploy": "/subscriptions/ba363aae-b7b7-4c88-898d-12a289eb12e7/resourceGroups/AleSQLGroup/providers/Microsoft.Web/sites/aleschwartzescuela"
+}

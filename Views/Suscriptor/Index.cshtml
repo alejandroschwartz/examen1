@@ -1,0 +1,97 @@
+@model IEnumerable<asp_net_core.Models.Suscriptor>
+
+@{
+    ViewData["Title"] = "Lista";
+}
+
+<h1>Lista de suscriptores</h1>
+
+<hr />
+<form class="row g-3">
+  <div class="col-auto">
+    <label for="inputPassword2" class="visually-hidden">Documento</label>
+    <input type="password" class="form-control" id="inputPassword2" placeholder="Número">
+    <button type="submit" class="btn btn-primary mt-2 mb-3">Buscar suscriptor</button>
+  </div>
+</form>
+
+<hr />
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nombre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Apellido)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NumeroDocumento)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TipoDocumento)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Dirección)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Apellido)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NumeroDocumento)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TipoDocumento)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Dirección)
+            </td>
+            <td>
+                <a class="btn btn-success btn-sm ml-2 mr-2" asp-action="Details" asp-route-id="@item.Id">Detalles</a>
+                <a class="btn btn-primary btn-sm ml-2 mr-2" asp-action="Edit" asp-route-id="@item.Id">Editar</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+
+
+@* <hr />
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nombre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Apellido)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@{
+    var oEscuela = (    from d in Model
+                                where d.NumeroDocumento == 42888333
+                                select d);
+foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Apellido)
+            </td>
+        </tr>
+}
+}
+    </tbody>
+</table> *@

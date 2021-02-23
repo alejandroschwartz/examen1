@@ -1,0 +1,46 @@
+﻿@{
+    ViewData["Title"] = "Inicio";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Examen la revista!</h1>
+</div>
+
+@* <div class="container-fluid mt-4">    
+    <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="https://i.imgur.com/QiSA7VJ.jpg" class="d-block w-100" alt="..." 
+                        style="object-fit: cover; height: 250px;"/>
+            </div>
+            <div class="carousel-item">
+                <img src="https://i.imgur.com/m0AAZjP.jpg" class="d-block w-100" alt="..." 
+                        style="object-fit: cover; height: 250px;"/>
+            </div>
+            <div class="carousel-item">
+                <img src="https://i.imgur.com/9MeXYy7.jpg" class="d-block w-100" alt="..." 
+                        style="object-fit: cover; height: 250px;"/>
+            </div>
+        </div>
+    </div>
+</div>  *@
+
+<div class="container">
+    <div class="card mt-4">
+        <div class="row">
+            <div class="col-md-2">
+            </div>
+            <div class="col-12 col-md-8">
+                <div class="card-body">
+                    <h4 class="card-title">Descripción</h4>
+                    <p class="card-text">El objetivo es registrar suscripciones para una revista mensual. <br/>
+                        <br/> Para registrar la suscripción, se debe buscar el suscriptor guardado previamente por tipo y numero de documento. En la pantalla se visualizaran todos los datos, en modo lectura, y al aceptar se efectuará la operación con la fecha actual. Ver C.U. Registrar Suscripción. <br/>
+                        <br/> En el caso de que no existiera el suscriptor, se procede a registrarla en la misma pantalla. Se debe tener en cuenta que el nombre de Usuario no se debe repetir y el password se deberá encriptar en la base de datos para luego mostrarlo al usuario correspondiente. Ver C.U. Registrar Suscriptor. <br/>
+                        <br/> En el caso de que el suscriptor exista y se quiera modificar los datos, el campo nombre de usuario permanecerá en solo lectura, se podrán modificar todos los datos excepto el nombre de usuario. Ver C.U. Modificar Suscriptor. <br/>
+                    </p>
+                    <a class="btn btn-primary mt-4" asp-area="" asp-controller="Suscriptor" asp-action="Details">Ir detalles</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
